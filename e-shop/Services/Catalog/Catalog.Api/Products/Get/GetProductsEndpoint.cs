@@ -6,7 +6,7 @@ using MediatR;
 
 public record GetProductsRequest();
 
-public record GetProductsResponse(List<Product> ProductsList);
+public record GetProductsResponse(IEnumerable<Product> ProductsList);
 
 
 public class GetProductsEndpoint : ICarterModule

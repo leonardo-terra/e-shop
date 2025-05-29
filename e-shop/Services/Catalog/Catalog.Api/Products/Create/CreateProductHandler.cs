@@ -6,12 +6,12 @@ namespace Catalog.Api.Products.Create
 {
     public record CreateProductCommand(
         string Name,
-        List<Category> Categories,
+        List<string> Categories,
         string Description,
         string ImageFile,
         decimal Price
     ) : IRequest<CreateProductResult>;
-    public record CreateProductResult(Guid id);
+    public record CreateProductResult(Guid Id);
 
     internal class CreateProductCommandHandler(IDocumentSession dbSession) : IRequestHandler<CreateProductCommand, CreateProductResult>
     {
