@@ -11,6 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Products\Read\**" />
+    <Content Remove="Products\Read\**" />
+    <EmbeddedResource Remove="Products\Read\**" />
+    <None Remove="Products\Read\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Carter" Version="8.2.1" />
     <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="Marten" Version="7.40.5" />
@@ -23,8 +30,6 @@
 
   <ItemGroup>
     <Folder Include="Products\Delete\" />
-    <Folder Include="Products\Read\" />
-    <Folder Include="Products\Update\" />
   </ItemGroup>
 
 </Project>
